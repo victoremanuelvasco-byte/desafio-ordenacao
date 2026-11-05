@@ -3,6 +3,7 @@
 ## Autor
 
 Vitor Emanoel Espíndola Alves
+Lucas Eduardo da Silva Nascimento
 
 ## 1. Objetivo
 
