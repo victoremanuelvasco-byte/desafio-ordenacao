@@ -4,6 +4,8 @@
 
 Vitor Emanoel Espíndola Alves
 Lucas Eduardo da Silva Nascimento
+Eduardo Antonio de Moura Santos
+Kelvin Eduardo
 
 ## 1. Objetivo
 
