@@ -72,7 +72,7 @@ int main()
     size_t quantidade = 0;
 
     // Abre o arquivo de entrada
-    arquivo = fopen("../listaOdenada.txt", "r");
+    arquivo = fopen("../ListahAhSerOrdenada.txt", "r");
 
     if (arquivo == NULL)
     {
@@ -112,6 +112,7 @@ int main()
         printf("Erro ao alocar memoria!\n");
         free(vetor);
         free(auxiliar);
+        free(original);
         fclose(arquivo);
         return 1;
     }
@@ -127,6 +128,7 @@ int main()
             printf("Erro ao carregar os dados!\n");
             free(vetor);
             free(auxiliar);
+            free(original);
             fclose(arquivo);
             return 1;
         }
@@ -189,7 +191,7 @@ for (size_t i = 0; i < quantidade; i++)
 
 printf("Preservacao da soma: %s\n",
        somaAntes == somaDepois ? "SIM" : "NAO");
-    printf("Tempo de ordenacao: %.6f segundos\n", tempo);
+    printf("Tempo de ordenacao: %.6f segundos (%.3f ms)\n", tempo, tempo * 1000.0);
 
     free(vetor);
     free(auxiliar);
