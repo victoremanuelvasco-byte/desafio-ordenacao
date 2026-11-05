@@ -1,27 +1,24 @@
 # Competição de Ordenação — O Desafio dos Milissegundos
 
+**Autor:** Vitor Emanoel Espíndola Alves
+
 ## 1. Objetivo
 
-O objetivo deste projeto é implementar um algoritmo de ordenação em linguagem C, capaz de organizar uma grande quantidade de números inteiros no menor tempo possível.
-
-Para os testes, foi utilizado o arquivo `listaOdenada.txt`, contendo 10 milhões de números.
+Implementar um algoritmo de ordenação em C capaz de organizar uma grande quantidade de números inteiros.
 
 ## 2. Algoritmo utilizado
 
-Foi escolhido o algoritmo **Merge Sort**, que utiliza a estratégia de divisão e conquista.
+Foi escolhido o **Merge Sort**, que utiliza a estratégia de divisão e conquista:
 
-Seu funcionamento acontece em três etapas:
 - Divide o vetor em partes menores.
 - Ordena essas partes individualmente.
 - Intercala as partes até formar um único vetor ordenado.
 
-A complexidade de tempo do algoritmo é O(N log N), e sua complexidade de espaço auxiliar é O(N).
+A complexidade de tempo é O(N log N), e o espaço auxiliar utilizado é O(N).
 
 ## 3. Medição de desempenho
 
-A medição foi realizada utilizando a função `clock()` da biblioteca `time.h`.
-
-A leitura do arquivo e a alocação de memória acontecem antes do início da contagem. Dessa forma, o tempo registrado corresponde somente à execução do algoritmo de ordenação.
+A medição usa a função `clock()` da biblioteca `time.h`. A leitura do arquivo e a alocação de memória acontecem antes da contagem; o tempo registrado corresponde somente à execução do Merge Sort.
 
 ## 4. Resultados obtidos
 
@@ -36,7 +33,7 @@ A leitura do arquivo e a alocação de memória acontecem antes do início da co
 
 ## 5. Verificação dos resultados
 
-Após a ordenação, foram realizadas três verificações:
+Após a ordenação, foram feitas estas verificações:
 
 1. Conferência da ordem crescente dos números.
 2. Comparação dos elementos ordenados com uma cópia da lista original, também ordenada.
@@ -44,9 +41,7 @@ Após a ordenação, foram realizadas três verificações:
 
 ## 6. Como compilar
 
-É necessário possuir um compilador GCC instalado.
-
-No terminal, execute:
+É necessário ter o GCC instalado. No terminal, dentro da pasta que contém `main.c`, execute:
 
 ```bash
 gcc -O2 -Wall -Wextra main.c -o ordenacao.exe
@@ -60,13 +55,14 @@ No Windows, execute:
 .\ordenacao.exe
 ```
 
-## 8. Estrutura do projeto
+## 8. Arquivos do projeto
 
 ```text
-desafio/
-├── main.c
-├── README.md
-└── ordenacao.exe
+Pasta de trabalho/
+├── listaOdenada.txt
+└── desafio-ordenacao/
+    ├── README.MD
+    └── main.c
 ```
 
-O arquivo de entrada `listaOdenada.txt` deve permanecer na pasta imediatamente acima de `desafio`, conforme o caminho utilizado no código.
+O programa procura `listaOdenada.txt` na pasta imediatamente acima daquela que contém `main.c`. Esse arquivo contém 10 milhões de números e não foi incluído no repositório por ser um conjunto de dados grande. O executável `ordenacao.exe` é gerado ao compilar e também não faz parte do repositório.
